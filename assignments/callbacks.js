@@ -106,9 +106,22 @@ console.log(contains('yo-yo', items, checkItem));
 
 
 /* STRETCH PROBLEM */
-
+let arrWithDups = ['phone', 'tv', 'remote', 'phone', 'computer', 'phone', 'laptop', 'speakers', 'speakers']
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  return cb(array);
 }
+
+function findDups(array){
+  let arrDupFree = [];
+  for (let i=0; i<array.length; i++){
+    if (arrDupFree.indexOf(array[i]) === -1){
+      arrDupFree.push(array[i])
+    }
+  }
+  return arrDupFree;
+}
+
+console.log(removeDuplicates(arrWithDups, findDups));
