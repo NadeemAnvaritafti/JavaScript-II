@@ -3,6 +3,17 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
+function sport(favoriteSport){
+  const player = "Dirk Nowitzki";
+  const position = "power forward";
+  console.log(`My favorite sport is ${favoriteSport}`);
+
+  function team(favoriteTeam){
+    console.log(`The ${favoriteTeam} are my favorite team and their ${position}, ${player}, is my favorite player`)
+  }
+  team('Dallas Mavericks')
+}
+sport('basketball');
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
